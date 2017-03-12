@@ -10,15 +10,17 @@
           etus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
     </span>
   
-  <h1>Macicky su top</h1>
-    <span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget m
-          etus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-    </span>
+{% for post in posts %}
+    <div>
+        <span>published: {{ post.published_date }}</span>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <span>{{ post.text|linebreaksbr }}</span>
+    </div>
+{% endfor %}
   
-  <h1>Neviem, co sem mam napisat</h1>
-     <span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget m
-          etus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-    </span>
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
 
   </body>
 </html>
